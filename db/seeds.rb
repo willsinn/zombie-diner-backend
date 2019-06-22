@@ -1,0 +1,15 @@
+Ingredient.create(name:"limbs")
+Ingredient.create(name:"eyes")
+Ingredient.create(name:"brains")
+Ingredient.create(name:"organs")
+
+Recipe.create(name:"brainwich")
+Recipe.create(name:"eyes")
+Recipe.create(name:"limbkibab")
+
+RecipeIngredient.create(ingredient_id: 2 , recipe_id: 0 )
+RecipeIngredient.create(ingredient_id: 1, recipe_id: 0 )
+RecipeIngredient.create(ingredient_id: 1, recipe_id: 1)
+RecipeIngredient.create(ingredient_id: 0, recipe_id: 3)
+RecipeIngredient.create(ingredient_id: 2, recipe_id: 3)
+RecipeIngredient.create(ingredient_id: 3, recipe_id: 3)
