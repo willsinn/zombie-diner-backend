@@ -1,8 +1,9 @@
 # Ingredients
-limbs = Ingredient.create(name:"Limbs")
-eyes = Ingredient.create(name:"Eyes")
-brains = Ingredient.create(name:"Brains")
-organs = Ingredient.create(name:"Organs")
+limbs = Ingredient.create(name:"Limbs", image: 'assets/limbs.svg')
+eyes = Ingredient.create(name:"Eyes", image: 'assets/eyes.svg')
+brains = Ingredient.create(name:"Brains", image: 'assets/brains.svg')
+organs = Ingredient.create(name:"Organs", image: 'assets/organs.svg')
+
 
 # Recipe Names
 brain_brulee = Recipe.create(name:"Brain Brulee")
