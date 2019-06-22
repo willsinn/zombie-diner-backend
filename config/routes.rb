@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'recipe/index'
-  get 'recipe/show'
+  get 'recipes', to: 'recipes#index'
+  get 'ingredients', to: 'recipes#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
