@@ -1,37 +1,56 @@
 # Ingredients
-Ingredient.create(name:"Limbs")
-Ingredient.create(name:"Eyes")
-Ingredient.create(name:"Brains")
-Ingredient.create(name:"Organs")
+limbs = Ingredient.create(name:"Limbs")
+eyes = Ingredient.create(name:"Eyes")
+brains = Ingredient.create(name:"Brains")
+organs = Ingredient.create(name:"Organs")
 
 # Recipe Names
-Recipe.create(name:"Brain Brulee")
+brain_brulee = Recipe.create(name:"Brain Brulee")
 # brain
-Recipe.create(name:"Eyeburger")
+eye_burger = Recipe.create(name:"Eyeburger")
 # eyes
-Recipe.create(name:"Limb Kebabs")
+limb_kebab = Recipe.create(name:"Limb Kebabs")
 # limbs
 
-Recipe.create(name:"Spaghetti and Eyeballs")
+spaghetti_eyeballs = Recipe.create(name:"Spaghetti and Eyeballs")
 # organs and eyes
-Recipe.create(name:"Keylimb Eye")
+key_limb_eye = Recipe.create(name:"Keylimb Eye")
 # limbs and eyes
-Recipe.create(name:"Limbone Steak")
+limbone_steak = Recipe.create(name:"Limbone Steak")
 # limbs and organs
-Recipe.create(name:"Pulled Limb Sandwich")
+pulled_limb_sandwich = Recipe.create(name:"Pulled Limb Sandwich")
 # limbs and brains
 
-Recipe.create(name:"Organs and Brains over Rice")
+organs_brains_rice = Recipe.create(name:"Organs and Brains over Rice")
 # organs, brains, eyes, limbs
-Recipe.create(name:"Brainbutter and Organjelly Sandwich")
+brain_butter_organ_jelly = Recipe.create(name:"Brainbutter and Organjelly Sandwich")
 # organs, brains, and limbs
-Recipe.create(name:"Brains wrapped in Organs over Eyes")
+brain_wrapped_organ_over_eyes = Recipe.create(name:"Brains wrapped in Organs over Eyes")
 # organs, brains, and eyes
 
-# Recipes
-RecipeIngredient.create(ingredient_id: 2 , recipe_id: 0 )
-RecipeIngredient.create(ingredient_id: 1, recipe_id: 0 )
-RecipeIngredient.create(ingredient_id: 1, recipe_id: 1)
-RecipeIngredient.create(ingredient_id: 0, recipe_id: 3)
-RecipeIngredient.create(ingredient_id: 2, recipe_id: 3)
-RecipeIngredient.create(ingredient_id: 3, recipe_id: 3)
+# Recipes.... make sure to drop DB  and 
+RecipeIngredient.create(ingredient_id: limbs.id , recipe_id: limb_kebab.id )
+RecipeIngredient.create(ingredient_id: brains.id , recipe_id: brain_brulee.id )
+RecipeIngredient.create(ingredient_id: eyes.id , recipe_id: eye_burger.id)
+RecipeIngredient.create(ingredient_id: organs.id, recipe_id: spaghetti_eyeballs.id)
+RecipeIngredient.create(ingredient_id: eyes.id, recipe_id: spaghetti_eyeballs.id)
+RecipeIngredient.create(ingredient_id: limbs.id, recipe_id: key_limb_eye.id)
+RecipeIngredient.create(ingredient_id: eyes.id, recipe_id: key_limb_eye.id)
+RecipeIngredient.create(ingredient_id: limbs.id, recipe_id: limbone_steak.id)
+RecipeIngredient.create(ingredient_id: organs.id, recipe_id: limbone_steak.id)
+RecipeIngredient.create(ingredient_id: limbs.id, recipe_id: pulled_limb_sandwich.id)
+RecipeIngredient.create(ingredient_id: brains.id, recipe_id: pulled_limb_sandwich.id)
+RecipeIngredient.create(ingredient_id: organs.id, recipe_id: organs_brains_rice.id)
+RecipeIngredient.create(ingredient_id: brains.id, recipe_id: organs_brains_rice.id)
+RecipeIngredient.create(ingredient_id: eyes.id, recipe_id: organs_brains_rice.id)
+RecipeIngredient.create(ingredient_id: limbs.id, recipe_id: organs_brains_rice.id)
+RecipeIngredient.create(ingredient_id: organs.id, recipe_id: brain_butter_organ_jelly.id)
+RecipeIngredient.create(ingredient_id: brains.id, recipe_id: brain_butter_organ_jelly.id)
+RecipeIngredient.create(ingredient_id: limbs.id, recipe_id: brain_butter_organ_jelly.id)
+RecipeIngredient.create(ingredient_id: organs.id, recipe_id: brain_wrapped_organ_over_eyes.id)
+RecipeIngredient.create(ingredient_id: brains.id, recipe_id: brain_wrapped_organ_over_eyes.id)
+RecipeIngredient.create(ingredient_id: eyes.id, recipe_id: brain_wrapped_organ_over_eyes.id)
+
+# RecipeIngredient.create(ingredient_id: organs.id, recipe_id: brain_butter_organ_jelly.id)
+# RecipeIngredient.create(ingredient_id: brains.id, recipe_id: brain_butter_organ_jelly.id)
+# RecipeIngredient.create(ingredient_id: limbs.id, recipe_id: brain_butter_organ_jelly.id)
