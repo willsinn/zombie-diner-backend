@@ -26,6 +26,8 @@ class RecipesController < ApplicationController
       Order.create(recipe_id: num )
     end
 
+    # byebug
+
     render json: orders_arr
   end
 
